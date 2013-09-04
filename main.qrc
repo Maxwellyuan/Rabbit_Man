@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>document.gif</file>
+        <file>qt-logo.png</file>
+        <file>diskette.gif</file>
+        <file>two-docs.gif</file>
+        <file>text-bigger.gif</file>
+        <file>main.png</file>
+        <file>checkmark.gif</file>
+    </qresource>
+</RCC>
