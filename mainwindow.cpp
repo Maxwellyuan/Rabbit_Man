@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ConnectSignals();
     ConnectToolbar();
 
-    ui->statusBar->showMessage(tr("Ready."), 5000);
+    ui->statusBar->showMessage(tr("Welcome to Rabbit Man !"), 5000);
 }
 
 MainWindow::~MainWindow()
@@ -47,6 +47,7 @@ void MainWindow::tabClose(int index)
     delete ui->tabWidget->widget(index);
 }
 
+//新建文件和标签
 FileTab *MainWindow::tabNew(const QString tabtext)
 {
     ui->tabWidget->addTab(new FileTab(this), tabtext);
@@ -75,18 +76,20 @@ void MainWindow::on_actionAboutQt_triggered()
     qApp->aboutQt();
 }
 
+//新建一个文件
 void MainWindow::on_actionNew_triggered()
 {
-    tabNew("Untitled");
-    ui->statusBar->showMessage(tr("A new tab opened."), 5000);
+    tabNew("untitled");
+    ui->statusBar->showMessage(tr("File"), 5000);
 }
 
+//打开文件
 void MainWindow::on_actionOpen_triggered()
 {
     QFile *file;
     FileTab *tab;
-    QString path = QFileDialog::getOpenFileName(this, tr("Open a source file."),
-                                                "", tr("C/C++ Source(*.c *.cpp)"));
+    QString path = QFileDialog::getOpenFileName(this, tr("Open File"),
+                                                "", tr("C/C++ Source(*.c *.cpp);;Text files (*.txt)"));
 
     if (!path.isEmpty()) {
         file = new QFile(path);
@@ -96,6 +99,7 @@ void MainWindow::on_actionOpen_triggered()
                 tab = tabNew(0);
             }
             tab->SendDataToEdit(file->readAll());
+
             ui->tabWidget->setTabText(ui->tabWidget->currentIndex(),
                                       QFileInfo(file->fileName()).fileName());
             ui->statusBar->showMessage(path, 5000);

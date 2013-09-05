@@ -25,7 +25,16 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <property name="margin">
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
      <number>1</number>
     </property>
     <item row="0" column="0">
@@ -82,12 +91,12 @@
      <x>0</x>
      <y>0</y>
      <width>703</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_F">
     <property name="title">
-     <string>ファイル(&amp;F)</string>
+     <string>文件(&amp;F)</string>
     </property>
     <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
@@ -169,7 +178,10 @@
   </action>
   <action name="actionQuit">
    <property name="text">
-    <string>終了(&amp;N)</string>
+    <string>退出(&amp;N)</string>
+   </property>
+   <property name="toolTip">
+    <string>退出(N)</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -181,7 +193,7 @@
      <normaloff>:/new/prefix1/two-docs.gif</normaloff>:/new/prefix1/two-docs.gif</iconset>
    </property>
    <property name="text">
-    <string>ファイルを開く(&amp;O)</string>
+    <string>打开(&amp;O)</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -196,7 +208,7 @@
      <normaloff>:/new/prefix1/text-bigger.gif</normaloff>:/new/prefix1/text-bigger.gif</iconset>
    </property>
    <property name="text">
-    <string>新しいファイル(&amp;N)</string>
+    <string>新建(&amp;N)</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
@@ -211,7 +223,7 @@
      <normaloff>:/new/prefix1/diskette.gif</normaloff>:/new/prefix1/diskette.gif</iconset>
    </property>
    <property name="text">
-    <string>名前を付けてファイルを保存(&amp;A)</string>
+    <string>另存为(&amp;A)</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>

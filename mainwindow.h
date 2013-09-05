@@ -41,6 +41,7 @@ public:
 
     void SendDataToEdit(const QString dat)
     { ((QTextEdit *)editor)->setPlainText(dat); }
+
     QString GetDataFromEdit(void)
     { return ((QTextEdit *)editor)->toPlainText(); }
     bool GetFlagIsChanged(void)
